@@ -1,0 +1,15 @@
+@use "variables";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: variables.$accent-primary;
+    color: variables.$text-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: variables.$h1-font-size;
+}
