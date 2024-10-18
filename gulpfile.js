@@ -17,6 +17,13 @@ function reloadHtml() {
         .pipe(browserSync.stream());
 }
 
+// Копирование и перезагрузка при изменении JS
+function reloadJs() {
+    return src('src/scripts/*.js')
+        .pipe(dest('dist/scripts'))
+        .pipe(browserSync.stream());
+}
+
 // Инициализация сервера
 function serve() {
     browserSync.init({
@@ -28,6 +35,7 @@ function serve() {
     // Наблюдение за изменениями файлов
     watch('src/styles/*.scss', compileSass);
     watch('src/*.html', reloadHtml);
+    watch('src/scripts/*.js', reloadJs);
 }
 
-exports.default = series(compileSass, reloadHtml, serve);
+exports.default = series(compileSass, reloadHtml, reloadJs, serve);
