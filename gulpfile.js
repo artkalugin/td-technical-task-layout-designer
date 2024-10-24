@@ -24,10 +24,9 @@ function reloadJs() {
         .pipe(browserSync.stream());
 }
 
-
 // Копирование PNG изображений
 function processPngImages() {
-    return src('src/images/*.png')
+    return src('src/images/*.png', {encoding: false})
         .pipe(dest('dist/images'))
         .pipe(browserSync.stream());
 }
