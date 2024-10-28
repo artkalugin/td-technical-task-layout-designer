@@ -41,7 +41,7 @@ function processSvgImages() {
 
 // Копирование WOFF2 шрифтов
 function processFonts() {
-    return src('src/fonts/*.woff2')
+    return src('src/fonts/*.woff2', { encoding: false }) // https://github.com/gulpjs/gulp/issues/2790
         .pipe(dest('dist/fonts'))
         .pipe(browserSync.stream());
 }
