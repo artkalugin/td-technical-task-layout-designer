@@ -8,6 +8,52 @@
     <script src="scripts/main.js"></script>
 </head>
 <body>
-    <h1>Здесь должен находиться конетнт</h1>
+    <div class="container">
+        <div class="card">
+            <div class="card__img-container">
+                <img class="card__img" src="images/product_image.png" alt="Volvo XC40" />
+            </div>
+            <div class="card__content">
+                <div class="card__header">
+                    <h3 class="card__title"><span class="no-click">Volvo XC40</span> <span class="card__year">2024</span></h2>
+                    <span class="badge">Скидка 200&nbsp;000&nbsp;₽</span>
+                </div>
+                <div class="specs">
+                    <div class="specs__item">
+                        <span class="specs__title">Бензин, 180 л. с.</span>
+                        <span class="specs__value">2.0 л</span>
+                    </div>
+                    <div class="specs__item">
+                        <span class="specs__title">Передний</span>
+                        <span class="specs__value">4&times;2</span>
+                    </div>
+                    <div class="specs__item">
+                        <span class="specs__title">6 ступеней</span>
+                        <span class="specs__value">АКПП</span>
+                    </div>
+                    <div class="specs__item">
+                        <span class="specs__title">Стоимость</span>
+                        <span class="specs__value specs__value--black no-click">5 131 000 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal">
+        <div class="modal__content">
+            <button class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 1L1 19M1 1L19 19" stroke="#E1E0E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <img class="modal__img" src="images/logo.svg" width="170" height="205" alt="Летящая ракета" />
+            <div class="modal__text">
+                <h3 class="modal__heading">Ваша заявка отправлена!</h3>
+                <p class="modal__message">Спасибо за&nbsp;обращение! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+            </div>
+            <button class="button modal__button">Вернуться в&nbsp;каталог</button>
+        </div>
+    </div>
 </body>
 </html>

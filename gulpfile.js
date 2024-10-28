@@ -60,7 +60,7 @@ function serve() {
     watch('src/scripts/*.js', reloadJs);
     watch('src/images/*.png', processPngImages);
     watch('src/images/*.svg', processSvgImages);
-    watch('src/images/*.woff2', processFonts);
+    watch('src/fonts/*.woff2', processFonts);
 }
 
 exports.default = series(compileSass, reloadHtml, reloadJs, processPngImages, processSvgImages, processFonts, serve);
